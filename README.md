@@ -9,3 +9,9 @@ alebsys Infra repository
 
 ```ssh_someinternalhost```
 
+
+```bastion_IP = 34.68.152.22 ```
+```someinternalhost_IP = 10.128.0.3```
+
+
+
