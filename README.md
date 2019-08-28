@@ -7,5 +7,5 @@ alebsys Infra repository
 
 Вызвать команду можно:
 
-ssh_someinternalhost
+```ssh_someinternalhost```
 
