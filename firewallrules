@@ -1,0 +1,1 @@
+ gcloud compute firewall-rules create default-puma-server-my --allow tcp:9292 --target-tags puma-server --direction ingress --source-ranges 0.0.0.0/0 
