@@ -1,17 +1,32 @@
-# alebsys_infra
-alebsys Infra repository
+Изменение требуемой версии Terraform
+Пункт в документации
 
-Создание алиаса для перехода на локальный хост someinternalhost:
+# old
+required_version = "0.11.14"
+...
 
-```alias ssh_someinternalhost='ssh -i /home/aleb/.ssh/id_rsa -A -t aleb@34.68.122.42 ssh 10.128.0.3'```
+# new
+required_version = "~> 0.12"
+...
+Изменение версии провайдера GCP
+# old
+provider "google" {   
+    version = "2.0.0"
+    ...
 
-Вызвать команду можно:
+# new
+provider "google" {   
+    version = "2.5.0"
+    ...
+Прямое использование выражений
+Пункт в докумкентации
 
-```ssh_someinternalhost```
+# old
+...
+private_key = "${file("~/.ssh/id_rsa")}"
+...
 
-
-```bastion_IP = 34.68.152.22 ```
-```someinternalhost_IP = 10.128.0.3```
-
-
-
+# new
+...
+private_key = file("~/.ssh/id_rsa")
+...
