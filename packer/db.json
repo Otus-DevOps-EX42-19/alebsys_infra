@@ -1,8 +1,7 @@
 {
 
     "variables": {
-      "gcp_project_id": "",
-      "gcp_source_image_family": "",
+      "gcp_project_id": "carbon-storm-251210",
       "gcp_machine_type": "f1-micro"
     },
 
@@ -10,9 +9,9 @@
         {
             "type": "googlecompute",
             "project_id": "{{user `gcp_project_id`}}",
-            "image_name": "reddit-base-{{timestamp}}",
+            "image_name": "reddit-base-db",
             "image_family": "reddit-base",
-            "source_image_family": "{{user `gcp_project_id`}}",
+            "source_image_family": "ubuntu-1604-lts",
             "zone": "europe-west1-b",
             "ssh_username": "appuser",
             "machine_type": "{{user `gcp_machine_type`}}"
