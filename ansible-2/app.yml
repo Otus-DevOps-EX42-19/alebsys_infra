@@ -1,28 +1,8 @@
----
-- name: Configure MongoDB
-  hosts: db
-  tags: db-tag
-  become: true
-  vars:
-    mongo_bind_ip: 0.0.0.0
-  tasks:
-    - name: Change mongo config file
-      template:
-        src: templates/mongod.conf.j2
-        dest: /etc/mongod.conf
-        mode: 0644
-      notify: restart mongod
-
-  handlers:
-  - name: restart mongod
-    service: name=mongod state=restarted
-
 - name: Configure App
   hosts: app
-  tags: app-tag
   become: true
   vars:
-   db_host: 35.233.115.118
+   db_host: 35.240.106.45
   tasks:
     - name: Add unit file for Puma
       copy:
@@ -35,7 +15,7 @@
         src: templates/db_config.j2
         dest: /home/aleb/db_config
         owner: aleb
-        group: leb
+        group: aleb
 
     - name: enable puma
       systemd: name=puma enabled=yes
@@ -43,3 +23,5 @@
   handlers:
   - name: reload puma
     systemd: name=puma state=restarted
+
+
