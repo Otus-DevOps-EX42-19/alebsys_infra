@@ -1,7 +1,7 @@
 # alebsys_infra
 alebsys Infra repository
 
-Создание алиаса для перехода на локальный хост someinternalhost:
+Создание алиаса для перехода на хост someinternalhost:
 
 ```alias ssh_someinternalhost='ssh -i /home/aleb/.ssh/id_rsa -A -t aleb@35.209.16.169 ssh 10.128.0.9'```
 
