@@ -2,7 +2,7 @@
   hosts: app
   become: true
   vars:
-          db_host: 35.195.143.88
+          db_host: 10.132.0.33:27017
   tasks:
     - name: Add unit file for Puma
       copy:
@@ -16,6 +16,7 @@
         dest: /home/aleb/db_config
         owner: aleb
         group: aleb
+      notify: reload puma  
 
     - name: enable puma
       systemd: name=puma enabled=yes
