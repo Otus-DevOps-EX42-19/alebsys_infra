@@ -19,6 +19,7 @@
 
     - name: enable puma
       systemd: name=puma enabled=yes
+      notify: reload puma
 
   handlers:
   - name: reload puma
