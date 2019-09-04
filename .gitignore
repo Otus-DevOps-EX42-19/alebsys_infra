@@ -2,3 +2,4 @@ terraform-1/
 *.retry
 jdauphant.nginx
 vault.key
+packer/variables.json
