@@ -13,7 +13,7 @@ alebsys Infra repository
 bastion_IP = 35.209.16.169
 
 
-someinternalhost_IP = 10.128.0.9
+someinternalhost_IP = 10.128.0.10
 
 
 
