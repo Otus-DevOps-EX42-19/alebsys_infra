@@ -11,10 +11,8 @@
     dest: /home/aleb/db_config
     owner: aleb
     group: aleb
-  notify: reload puma  
 
 - name: enable puma
   systemd: name=puma enabled=yes
-  notify: reload puma
 
 
