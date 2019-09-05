@@ -15,7 +15,7 @@
             "image_family": "reddit-base",
             "source_image_family": "{{user `gcp_source_image_family`}}",
             "zone": "europe-west1-b",
-            "ssh_username": "appuser",
+            "ssh_username": "aleb",
             "machine_type": "{{user `gcp_machine_type`}}"
         }
     ],
