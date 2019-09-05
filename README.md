@@ -1,17 +1,24 @@
 # alebsys_infra
 alebsys Infra repository
 
-Создание алиаса для перехода на локальный хост someinternalhost:
+### Использование startup_script для развёртывания инстанса
 
-```alias ssh_someinternalhost='ssh -i /home/aleb/.ssh/id_rsa -A -t aleb@34.68.122.42 ssh 10.128.0.3'```
+В папке со скриптом необходимо запустить примерно следующую команду:
 
-Вызвать команду можно:
+```
+gcloud compute instances create reddit-app-deploy  --boot-disk-size=10GB   --image-family ubuntu-1604-lts   --image-project=ubuntu-os-cloud   --machine-type=g1-small   --tags puma-server   --restart-on-failure --metadata-from-file startup-script=startup-script.sh
+```
 
-```ssh_someinternalhost```
+### Создание firewall правила
 
+Для создания правила firewall с помощью gcloud необходимо выполнить примерно следующую команду:
 
-```bastion_IP = 34.68.152.22 ```
-```someinternalhost_IP = 10.128.0.3```
+```
+gcloud compute firewall-rules create default-puma-server --allow tcp:9292 --source-ranges=0.0.0.0/0 --priority=1000 --target-tags=puma-server
+```
 
+### Домашнее задание testapp
 
+testapp_IP = 35.228.41.31
+testapp_port = 9292
 
