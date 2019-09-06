@@ -14,7 +14,7 @@
       bundler:
         state: present
         chdir: /home/aleb/reddit
-      notify: reload puma 
+      notify: reload puma
 
   handlers:
   - name: reload puma
