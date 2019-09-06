@@ -1,3 +1,4 @@
+---
 - name: Install App
   hosts: all
   become: true
@@ -11,4 +12,3 @@
           - ruby-full
           - ruby-bundler
           - build-essential
-          
