@@ -1,0 +1,12 @@
+terraform-1/
+*.retry
+jdauphant.nginx
+vault.key
+packer/variables.json
+# Vagrant & molecule
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache
